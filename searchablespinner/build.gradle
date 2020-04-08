@@ -2,17 +2,14 @@ buildscript {
     repositories {
         mavenCentral()
     }
-
     dependencies {
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
     }
 }
-
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 group='com.github.mudassar1'
-version = '1.0.0'
-
+version = '1.0.1'
 
 android {
     compileSdkVersion 29
@@ -25,7 +22,6 @@ android {
         versionName version
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-
     }
     buildTypes {
         release {
