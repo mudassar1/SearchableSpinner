@@ -1,0 +1,55 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion '29.0.3'
+    defaultConfig {
+        applicationId "com.androidtrip.plugins.searchablespinnerexample"
+        minSdkVersion 16
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.facebook.stetho:stetho:1.5.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.1.0'
+//    implementation project(path: ':searchablespinner')
+    implementation 'com.androidtrip.plugins.searchablespinner:SearchableSpinner:1.0.0'
+
+    implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+    testImplementation 'junit:junit:4.12'
+}
+
+def githubProperties = new Properties()
+githubProperties.load(new FileInputStream(rootProject.file("github.properties")))
+
+repositories {
+    maven {
+        name = "SearchableSpinner"
+        /*  Configure path to the library hosted on GitHub Package Registry
+         *  Replace UserID with package owner userID and REPOSITORY with the repository name
+         *  e.g. "https://maven.pkg.github.com/enefce/AndroidLibraryForGitHubPackagesDemo"
+         */
+        url = uri("https://maven.pkg.github.com/mudassar1/SearchableSpinner")
+
+        credentials {
+            username = githubProperties['gpr.usr'] ?: System.getenv("GPR_USER")
+            password = githubProperties['gpr.key'] ?: System.getenv("GPR_API_KEY")
+        }
+    }
+}
+
