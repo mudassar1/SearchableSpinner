@@ -9,7 +9,7 @@
 
 Add the dependency to your build.gradle.
 ```xml
-implementation 'com.androidtrip.plugins.searchablespinner:SearchableSpinner:1.0.9'
+implementation 'com.androidtrip.plugins.searchablespinner:SearchableSpinner:1.0.0'
 ```
 
 Usage on layout
