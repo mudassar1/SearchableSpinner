@@ -56,7 +56,7 @@ publishing {
 
     repositories {
         maven {
-            name = "SearchableSpinner"
+            name = "GithubPackages"
             /** Configure path of your package repository on Github
              *  Replace GITHUB_USERID with your/organisation Github userID and REPOSITORY with the repository name on GitHub
              */
