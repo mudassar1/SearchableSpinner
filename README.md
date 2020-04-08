@@ -1,8 +1,6 @@
+[![](https://jitpack.io/v/mudassar1/SearchableSpinner.svg)](https://jitpack.io/#mudassar1/SearchableSpinner)
+
 <snippet>
-        
-        [![](https://jitpack.io/v/mudassar1/SearchableSpinner.svg)](https://jitpack.io/#mudassar1/SearchableSpinner)
-
-
 
 # Searchable Spinner
 
