@@ -11,7 +11,7 @@
 
 Add the dependency to your build.gradle.
 ```xml
-implementation 'com.androidtrip.plugins.searchablespinner:SearchableSpinner:1.0.0'
+implementation 'com.github.mudassar1:SearchableSpinner:v1.1'
 ```
 
 Usage on layout
