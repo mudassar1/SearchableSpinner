@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SearchableSpinner2.iml" filepath="$PROJECT_DIR$/SearchableSpinner2.iml" group="SearchableSpinner2" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="SearchableSpinner2/app" />
-      <module fileurl="file://$PROJECT_DIR$/searchablespinner/searchablespinner.iml" filepath="$PROJECT_DIR$/searchablespinner/searchablespinner.iml" group="SearchableSpinner2/searchablespinner" />
+      <module fileurl="file://$PROJECT_DIR$/SearchableSpinner.iml" filepath="$PROJECT_DIR$/SearchableSpinner.iml" group="SearchableSpinner" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="SearchableSpinner/app" />
+      <module fileurl="file://$PROJECT_DIR$/searchablespinner/searchablespinner.iml" filepath="$PROJECT_DIR$/searchablespinner/searchablespinner.iml" group="SearchableSpinner/searchablespinner" />
     </modules>
   </component>
 </project>
