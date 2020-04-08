@@ -1,14 +1,4 @@
-apply plugin: 'maven-publish'
 apply plugin: 'com.android.library'
-def githubProperties = new Properties()
-githubProperties.load(new FileInputStream(rootProject.file("github.properties")))
-
-def getVersionName = { ->
-    return "1.0.0"
-}
-def getArtificatId = { ->
-    return "SearchableSpinner"
-}
 
 android {
     compileSdkVersion 29
@@ -42,31 +32,4 @@ dependencies {
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.joanzapata.iconify:android-iconify-material:2.2.2'
     testImplementation 'junit:junit:4.12'
-}
-
-publishing {
-    publications {
-        SearchableSpinner(MavenPublication) {
-            groupId 'com.androidtrip.plugins.searchablespinner'
-            artifactId getArtificatId()
-            version getVersionName()
-            artifact("$buildDir/outputs/aar/${getArtificatId()}-release.aar")
-        }
-    }
-
-    repositories {
-        maven {
-            name = "GithubPackages"
-            /** Configure path of your package repository on Github
-             *  Replace GITHUB_USERID with your/organisation Github userID and REPOSITORY with the repository name on GitHub
-             */
-            url = uri("https://maven.pkg.github.com/mudassar1/SearchableSpinner")
-//d1395fc5e56ab6f8fd0bd16be8a760c9d9dceca7
-            credentials {
-                /**Create github.properties in root project folder file with gpr.usr=GITHUB_USER_ID  & gpr.key=PERSONAL_ACCESS_TOKEN**/
-                username = githubProperties['gpr.usr'] ?: System.getenv("GPR_USER")
-                password = githubProperties['gpr.key'] ?: System.getenv("GPR_API_KEY")
-            }
-        }
-    }
 }
