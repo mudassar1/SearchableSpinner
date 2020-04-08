@@ -5,6 +5,7 @@
 
 ![Demo SearchableSpinner](https://github.com/michaelprimez/searchablespinner/blob/master/searchablespinner.gif) 
 
+
 ## Usage
 
 Add the dependency to your build.gradle.
@@ -41,7 +42,9 @@ Usage on layout
 
 ## History
 #### Version 1.0.0
-* Forked from https://github.com/michaelprimez/searchablespinner
+* Thanks to https://github.com/michaelprimez/searchablespinner
+* Just removed animations of above mentioned library
+* due to this change it can be used in API Level 16 and above.
 * Initial Release
 
 # LICENSE 
